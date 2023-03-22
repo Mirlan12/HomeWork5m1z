@@ -32,12 +32,12 @@ class MainActivity : AppCompatActivity(), CounterView {
     }
 
     override fun updateText(count: String) {
-        binding.result.text = count.toString()
+        binding.result.text = count
     }
 
     override fun showToast(message: String){
         Toast.makeText(applicationContext, message, Toast.LENGTH_SHORT).show()
     }
 
-    override fun showColor(color: Int) = binding.result.setHintTextColor(color)
+    override fun showColor(color: Int) = binding.result.setTextColor(color)
     }

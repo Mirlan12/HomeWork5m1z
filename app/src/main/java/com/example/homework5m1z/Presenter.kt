@@ -12,10 +12,10 @@ class Presenter {
         view.updateText(model.count.toString())
 
         if (model.count == 10){
-            CounterView.showToast("God!")
+            view.showToast("God!")
         }
         if (model.count == 15)
-            CounterView.showColor(Color.GRAY)
+            view.showColor(Color.GREEN)
 
     }
 
@@ -23,8 +23,8 @@ class Presenter {
         model.decrement()
         view.updateText(model.count.toString())
 
-        if (model.count <= 15){
-            CounterView.updateText(Color.RED)
+        if (model.count <= -15){
+            view.showColor(Color.RED)
         }
 
     }
